@@ -34,7 +34,16 @@ Author URI: http://www.averykushner.com
       
     }
 
-    #bhn-logo{
+    .bhn-logo{
+
+      margin: auto;
+      display: block;
+      width: 40%;
+      height: auto;
+
+    }
+
+    .custom{
 
       margin: auto;
       display: block;
@@ -126,7 +135,7 @@ Author URI: http://www.averykushner.com
 
     }
 
-    #non-front-bhn-logo{
+    .non-front-bhn-logo{
 
       margin: auto;
       display: block;

@@ -7,6 +7,7 @@ It currently has:
 - A dynamic menu template
 - A Blog template
 - A Single Page template
+- Customizable Header Logo Support
 
 With more to come, including custom plugins
 
