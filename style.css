@@ -232,12 +232,14 @@ Author URI: http://www.averykushner.com
         margin-top: 5%;
         background-color:#ffffff;
         width: 25%;
+
       }
 
       .post:hover{
 
         position: relative;
         top: 5px;
+        z-index: 10;
 
       }
 
@@ -257,6 +259,7 @@ Author URI: http://www.averykushner.com
       .post h4:hover{
 
         border-bottom: 1px solid firebrick;
+        border-
 
       }
 
