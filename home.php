@@ -1,12 +1,11 @@
 <?php get_header('non-front'); ?>
 
   <?php $wp_query = new WP_Query('posts_per_page=7'); ?>
-
+  	<h1>Blog</h1>
   	<div class="front-blog-posts">
   	<article class="posts" >
 
 	    <?php if($wp_query->have_posts()) : while($wp_query->have_posts()) : $wp_query->the_post(); ?>
-	    
 	    <div class="post">
 		    	<h4 class="blog-post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
 				<p class="excerpt"><?php echo strip_tags(get_the_excerpt()); ?></p>

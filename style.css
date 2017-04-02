@@ -169,6 +169,7 @@ Author URI: http://www.averykushner.com
     body {
       font-family: 'Raleway', "Open Sans", sans-serif;
       font-weight: 100;
+      background-color: #f6f6f6;
       
     }
 
@@ -178,6 +179,13 @@ Author URI: http://www.averykushner.com
       flex-direction: row;
       padding-bottom: 180px;
       margin-bottom: 50px;
+
+    }
+
+    h1{
+
+      font-size: 50px;
+      font-weight: 200;
 
     }
 
@@ -210,18 +218,27 @@ Author URI: http://www.averykushner.com
 
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        flex-direction: row;
+        justify-content: space-between;
       
       }
 
       .post{
 
-        padding: 40px;
+        padding: 20px;
+        padding-top: 10px;
         box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
         margin: auto;
         margin-top: 5%;
         background-color:#ffffff;
-        width: 75%;
+        width: 25%;
+      }
+
+      .post:hover{
+
+        position: relative;
+        top: 5px;
+
       }
 
       .post img{
@@ -233,7 +250,14 @@ Author URI: http://www.averykushner.com
 
       .post h4{
 
-        font-size: 25px;
+        font-size: 30px;
+        text-align: center;
+    
+      }
+      .post h4:hover{
+
+        border-bottom: 1px solid firebrick;
+
       }
 
       /** END Article Styles **/
@@ -264,7 +288,9 @@ Author URI: http://www.averykushner.com
         height:70px;*/
 
         position: relative;
-        margin-top: 100px; /* negative value of footer height */
+        bottom: 0px;
+        margin-top: 400px;
+        margin-bottom: 0px;
         height: 180px;
         clear:both;
         background-color:#272822;
@@ -633,6 +659,14 @@ Author URI: http://www.averykushner.com
 
 
     /** END SIDE-BAR STYLES */
+
+    /**** BLOG STYLES *****/
+
+    .post{
+
+      width: 100%;
+
+    }
 
 }
 
