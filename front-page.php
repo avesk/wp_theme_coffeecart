@@ -2,14 +2,22 @@
 
 <div id="wrapper">
    
-    <p id="hours">
+<!--     <p id="hours">
       Hours: Mon - Fri 10am - 5pm
-    </p>
+    </p> -->
 
-    <p id="slogan"><i>Consciousness café proudly serving
+    <!-- <p id="slogan">Consciousness café proudly serving
       Capulin traditionally handcrafted 
-      coffee in Nelson BC</i>
-    </p>
+      coffee in Nelson BC
+    </p> -->
+
+    <?php if( have_posts() ) : while( have_posts() ): the_post(); ?>
+
+    	<div id="slogan"><?php the_content(); ?></div>
+
+    <?php endwhile; endif; ?>
+
+   
 
     <?php $wp_query = new WP_Query('posts_per_page=7'); ?>
 

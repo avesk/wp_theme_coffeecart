@@ -8,6 +8,21 @@ Author URI: http://www.averykushner.com
 */
 
 /********* Platform Independent Styles ********/
+    @import url(https://fonts.googleapis.com/css?family=Abel|Josefin+Sans|Quicksand);
+    @keyframes firebrickBorder {
+
+      from{
+  
+        border: none;
+  
+      }
+  
+      to{
+  
+        border: 1px solid firebrick;
+  
+      }
+    }
 
     /** Header Styles **/
 
@@ -62,6 +77,12 @@ Author URI: http://www.averykushner.com
     #toggle-nav{
 
       display: none;
+
+    }
+
+    .menu{
+
+      z-index: 100;
 
     }
 
@@ -167,7 +188,10 @@ Author URI: http://www.averykushner.com
     /** Main Styles **/
 
     body {
-      font-family: 'Raleway', "Open Sans", sans-serif;
+      /*font-family: 'Raleway', "Open Sans", sans-serif;*/
+      /*font-family: 'Abel', sans-serif;*/
+      /*font-family: 'Josefin Sans', sans-serif;*/
+      font-family: 'Quicksand', sans-serif;
       font-weight: 100;
       background-color: #f6f6f6;
       
@@ -206,9 +230,14 @@ Author URI: http://www.averykushner.com
 
     #slogan{
 
-      margin-top: 40px;
+      padding-top: 100px;
+      padding-bottom: 20px;
+      margin-bottom: 100px;
+      margin-left: 15%;
+      margin-right: 15%;
       text-align: center;
-      font-size: 25px;
+      font-size: 45px;
+      font-style: normal;
 
     }
 
@@ -232,14 +261,19 @@ Author URI: http://www.averykushner.com
         margin-top: 5%;
         background-color:#ffffff;
         width: 25%;
+        border-radius: 4px;
 
       }
 
       .post:hover{
 
-        position: relative;
-        top: 5px;
-        z-index: 10;
+        background-color: #ededed;
+        transition: background-color 600ms linear;
+        /*animation-name: firebrickBorder;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-in;*/
+        /*border: 1px solid firebrick;*/
 
       }
 
@@ -247,6 +281,7 @@ Author URI: http://www.averykushner.com
 
         width: 100%;
         height: 100%;
+        border-radius: 5px;
 
       }
 
@@ -357,6 +392,12 @@ Author URI: http://www.averykushner.com
 
 
     /** Blog styles **/
+
+    #h1-blog{
+
+      text-align: center;
+
+    }
 
     #blog-header{
 
@@ -570,6 +611,12 @@ Author URI: http://www.averykushner.com
       
     }
 
+    .active{
+
+      display: inline;
+
+    }
+
     #toggle-nav{
       text-decoration: none;
       display: inline-block;
@@ -595,29 +642,29 @@ Author URI: http://www.averykushner.com
         display:none;
     }
 
-    nav .sub-menu{
-
-      display: none;
-      
-
-    }
-
-    nav .sub-menu li{
-
-      margin: 0;
-
-    }
-
-    nav .sub-menu li a{
-
-      padding-left: 0px;
-      text-align: left;
-
-    }
-
-    nav ul li:hover > ul{
+    /*nav ul li:hover > ul.sub-menu*/
+    nav ul li:hover > ul.sub-menu{
 
       display: block;
+
+    }
+
+    ul.sub-menu{
+      margin: 0px;
+      margin-bottom: 1px;
+      width: 100%;
+
+    }
+
+    ul.sub-menu li{
+
+      font-size: 12px;
+      margin: auto;
+
+    }
+
+    ul.sub-menu li a{
+      text-align: center;
     }
 
     /** END Nav Styles **/
@@ -711,13 +758,15 @@ Author URI: http://www.averykushner.com
       display: block;
       text-align: center;
       font-size: 20px;
-
+      transition: color .3s linear;
 
     }
 
     nav ul li a:hover{
+
       color:firebrick;
       
     }
+
 
 }

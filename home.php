@@ -1,7 +1,7 @@
 <?php get_header('non-front'); ?>
 
   <?php $wp_query = new WP_Query('posts_per_page=7'); ?>
-  	<h1>Blog</h1>
+  	<h1 id="h1-blog">Blog</h1>
   	<div class="front-blog-posts">
   	<article class="posts" >
 
