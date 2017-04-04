@@ -8,7 +8,7 @@ Author URI: http://www.averykushner.com
 */
 
 /********* Platform Independent Styles ********/
-    @import url(https://fonts.googleapis.com/css?family=Abel|Josefin+Sans|Quicksand);
+    @import url(https://fonts.googleapis.com/css?family=Abel|Josefin+Sans|Quicksand|Pacifico);
     @keyframes firebrickBorder {
 
       from{
@@ -26,15 +26,17 @@ Author URI: http://www.averykushner.com
 
     /** Header Styles **/
 
-    header{
+    #home-header-h1{
 
+      display: block;
+      font-size: 80px;
       color: white;
-      
-    }
-
-    #header-h1{
-
-      display: none;
+      text-align: center;
+      font-family: 'Josefin Sans', sans-serif;
+      font-family: 'Abel', sans-serif;
+      /*font-family: 'Pacifico', cursive;*/
+      /*font-weight: 1000;*/
+      font-weight: 100;
       
     }
 
@@ -51,9 +53,11 @@ Author URI: http://www.averykushner.com
 
     .bhn-logo{
 
+      padding-top: 1%;
       margin: auto;
+      margin-bottom: 0px;
       display: block;
-      width: 40%;
+      width: 60%;
       height: auto;
 
     }
@@ -68,7 +72,7 @@ Author URI: http://www.averykushner.com
 
     #header-image-name {
 
-      background-color:firebrick;
+      background-color: firebrick;
       box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
       padding-bottom: 5px;
 
@@ -86,9 +90,10 @@ Author URI: http://www.averykushner.com
 
     }
 
-    nav ul{
+    nav{
 
       box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+
     }
 
     nav .sub-menu{
@@ -169,11 +174,6 @@ Author URI: http://www.averykushner.com
 
       display: none;
 
-    }
-
-    nav ul{
-
-      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
     }
 
     #non-front-wrapper{
@@ -291,10 +291,9 @@ Author URI: http://www.averykushner.com
         text-align: center;
     
       }
-      .post h4:hover{
+      .post h4 > a:hover{
 
         border-bottom: 1px solid firebrick;
-        border-
 
       }
 
@@ -385,7 +384,7 @@ Author URI: http://www.averykushner.com
 
     .blog-post-title a{
       text-decoration: none;
-      color: firebrick;
+      color: #333333;
       font-weight: 100;
 
     }
@@ -572,13 +571,33 @@ Author URI: http://www.averykushner.com
 
 @media screen and (max-width: 860px){
 
+  #home-header-h1{
+
+    font-size: 50px;
+
+  }
+
+  #slogan{
+
+    font-size: 30px;
+
+  }
+
+  .bhn-logo{
+
+    width: 80%;
+
+  }
+
   /** Nav Styles **/
     
     nav{
 
       width: 100%;
       z-index: 100;
-
+      position: fixed;
+      top: 50px;
+      box-shadow: none;
     }
 
     nav ul{
@@ -728,18 +747,19 @@ Author URI: http://www.averykushner.com
 
     width: 100%;
     margin: auto;
+    background-color: rgba(0,0,0,0.3);
 
   }
 
   nav ul{
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-between;
     list-style-type: none;
     width: 95%;
     min-height: 40px;
     height: auto;
-    background-color: black;
+    /*background-color: rgba(0,0,0,0.5);*/
     border-radius: 3px;
     margin-top: 2px;
 
@@ -757,7 +777,7 @@ Author URI: http://www.averykushner.com
       text-decoration: none;
       display: block;
       text-align: center;
-      font-size: 20px;
+      font-size: 14px;
       transition: color .3s linear;
 
     }

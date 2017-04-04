@@ -13,7 +13,21 @@
 
   <header>
     <div id="header-image-name">
+      <nav class="menu">
+      <?php 
 
+        $defaults = array(
+          'container' => false,
+          'theme_location' => 'primary-menu',
+          'menu_class' => 'active'
+          );
+
+        wp_nav_menu($defaults);
+
+      ?>
+      
+      <a id="toggle-nav" href="#">&#9776;</a>
+    </nav>
       <?php //If there is a custom header logo display it. If not use the default
 
         if( function_exists('the_custom_logo') && has_custom_logo() ) {
@@ -37,27 +51,8 @@
 
       <?php } ?>
 
-      <h1 id="header-h1">Bean Here Now Consciousness Cafe</h1>
-
+      <h1 id="home-header-h1">Bean Here Now Consciousness Cafe</h1>
     </div>
-
-    <nav class="menu">
-      <?php 
-
-        $defaults = array(
-          'container' => false,
-          'theme_location' => 'primary-menu',
-          'menu_class' => 'active'
-          );
-
-        wp_nav_menu($defaults);
-
-      ?>
-      
-      <a id="toggle-nav" href="#">&#9776;</a>
-    </nav>
-
-    
     <!-- <nav class="menu">
       <ul class="active">
         <li><a href="#">Menu</a></li>
