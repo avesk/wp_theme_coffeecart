@@ -26,6 +26,12 @@ Author URI: http://www.averykushner.com
 
     /** Header Styles **/
 
+    header{
+
+      z-index: 300;
+
+    }
+
     #home-header-h1{
 
       display: block;
@@ -86,7 +92,7 @@ Author URI: http://www.averykushner.com
 
     .menu{
 
-      z-index: 100;
+      z-index: 300;
 
     }
 
@@ -232,7 +238,7 @@ Author URI: http://www.averykushner.com
 
       padding-top: 100px;
       padding-bottom: 20px;
-      margin-bottom: 100px;
+      margin-bottom: 50px;
       margin-left: 15%;
       margin-right: 15%;
       text-align: center;
@@ -259,15 +265,16 @@ Author URI: http://www.averykushner.com
         box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
         margin: auto;
         margin-top: 5%;
-        background-color:#ffffff;
+        background-color:firebrick;
         width: 25%;
         border-radius: 4px;
+        color: white;
 
       }
 
       .post:hover{
 
-        background-color: #ededed;
+        background-color: #ff3232;
         transition: background-color 600ms linear;
         /*animation-name: firebrickBorder;
         animation-duration: 1s;
@@ -289,6 +296,7 @@ Author URI: http://www.averykushner.com
 
         font-size: 30px;
         text-align: center;
+        color: white;
     
       }
       .post h4 > a:hover{
@@ -296,6 +304,20 @@ Author URI: http://www.averykushner.com
         border-bottom: 1px solid firebrick;
 
       }
+
+      .blog-post-title a{
+
+      text-decoration: none;
+      font-weight: 100;
+      color: white;
+
+    }
+
+    ul.post-meta a{
+
+      color: black;
+
+    }
 
       /** END Article Styles **/
 
@@ -306,6 +328,35 @@ Author URI: http://www.averykushner.com
 
     .front-blog-posts{
       margin-bottom: 50px;
+    }
+
+    div.front-page-featured-images-container{
+
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 5%;
+
+    }
+
+    div.front-page-featured-image-wrapper {
+
+      width: 28%;
+      height: auto;
+      padding-left: 2.5%;
+      padding-right: 2.5%;
+      padding-top: 2.5%
+
+    }
+
+    div.front-page-featured-image-wrapper img{
+
+      width: 100%;
+      height: auto;
+      /*width: inherit;
+      height: inherit;*/
+      border-radius: 5px;
+
     }
 
     /* END Front page styles*/
@@ -379,13 +430,6 @@ Author URI: http://www.averykushner.com
 
       visibility: visible;
 
-
-    }
-
-    .blog-post-title a{
-      text-decoration: none;
-      color: #333333;
-      font-weight: 100;
 
     }
 
@@ -550,14 +594,34 @@ Author URI: http://www.averykushner.com
     /** END ABOUT PAGE STYLES **/
 
 
-    /** CONTACT PAGE STYLES **/
+    /** PLATFORM IND. CONTACT PAGE STYLES **/
+
+    #contact-h1{
+
+      margin-left: 12%;
+
+    }
 
     div.contact-content p{
 
       font-size: 25px;
       padding: 1%;
       margin: auto;
-      text-align: center;
+      margin-left: 15%;
+
+    }
+
+    form label input{
+
+      width: 70%;
+      font-size: 20px;
+
+    }
+
+    form label textarea{
+
+      width: 70%;
+      font-size: 20px;
 
     }
 
@@ -579,7 +643,7 @@ Author URI: http://www.averykushner.com
 
   #slogan{
 
-    font-size: 30px;
+    font-size: 35px;
 
   }
 
@@ -594,7 +658,7 @@ Author URI: http://www.averykushner.com
     nav{
 
       width: 100%;
-      z-index: 100;
+      z-index: 300;
       position: fixed;
       top: 50px;
       box-shadow: none;
@@ -688,7 +752,18 @@ Author URI: http://www.averykushner.com
 
     /** END Nav Styles **/
 
-    /** CONTACT PAGE STYLES */
+    /** FRONT PAGE STYLES **/
+
+    div.front-page-featured-image-wrapper{
+
+      width: 80%;
+      height: auto;
+
+    }
+
+    /** END FRONT PAGE STYLES **/
+
+    /** MOBILE CONTACT PAGE STYLES */
 
     div.contact-content p{
 
@@ -736,6 +811,27 @@ Author URI: http://www.averykushner.com
       width: 100%;
 
     }
+
+}
+
+/*Extra media queries for adjusting slogan size*/
+@media screen and (max-width: 676px){
+
+  #slogan{
+
+    font-size: 30px;
+
+  }
+
+}
+
+@media screen and (max-width: 480px){
+
+  #slogan{
+
+    font-size: 20px;
+
+  }
 
 }
 

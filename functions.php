@@ -19,7 +19,7 @@ add_filter('excerpt_length', 'wpt_excerpt_length', 999);
 function register_theme_menus(){
 	
 	register_nav_menus(
-		array('primary-menu' => __('Primary Menu'))
+		array('primary-menu' => __('Primary Menu'), 'footer-menu' => __('Footer Menu'))
 
 		);
 }

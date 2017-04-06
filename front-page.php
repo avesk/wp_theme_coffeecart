@@ -1,20 +1,39 @@
 <?php get_header(); ?>
 
 <div id="wrapper">
-   
-<!--     <p id="hours">
-      Hours: Mon - Fri 10am - 5pm
-    </p> -->
-
-    <!-- <p id="slogan">Consciousness café proudly serving
-      Capulin traditionally handcrafted 
-      coffee in Nelson BC
-    </p> -->
 
     <?php if( have_posts() ) : while( have_posts() ): the_post(); ?>
 
     	<div id="slogan"><?php the_content(); ?></div>
 
+    	<!-- Code Block echos featured images to page -->
+    	<?php
+
+    		// returns an array of arrays containing image urls if the Dynamic Featured images
+    		// plugin is on
+	    	if( class_exists('Dynamic_Featured_Image') ) {
+				
+				global $dynamic_featured_image;
+				$featured_images = $dynamic_featured_image->get_featured_images(31);
+
+       	// 		echo '<p>Blahhh</p>';
+     			// echo '<p>' . $featured_images[0]['full'] . '</p>';
+
+				//Loop through featured_images and echo the images wrapped in divs
+				//out on the page, inside of a div container
+
+				echo '<div class="front-page-featured-images-container">';
+	    		foreach ($featured_images as $urlArray){
+
+		    		echo '<div class="front-page-featured-image-wrapper">';
+		    		echo '<img src="' . $urlArray['full'] . '" />';
+		    		echo '</div>';
+
+		    	}
+		    	echo '</div>';
+   			}
+
+	   	?>
     <?php endwhile; endif; ?>
 
    
