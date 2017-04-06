@@ -12,16 +12,13 @@
     		// returns an array of arrays containing image urls if the Dynamic Featured images
     		// plugin is on
 	    	if( class_exists('Dynamic_Featured_Image') ) {
-				
+				$postid = get_the_ID();
 				global $dynamic_featured_image;
-				$featured_images = $dynamic_featured_image->get_featured_images(31);
+				$featured_images = $dynamic_featured_image->get_featured_images($postid);
 
-       	// 		echo '<p>Blahhh</p>';
-     			// echo '<p>' . $featured_images[0]['full'] . '</p>';
 
 				//Loop through featured_images and echo the images wrapped in divs
 				//out on the page, inside of a div container
-
 				echo '<div class="front-page-featured-images-container">';
 	    		foreach ($featured_images as $urlArray){
 
